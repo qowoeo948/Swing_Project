@@ -2,18 +2,15 @@ package hotelreserv.client;
 
 import java.awt.Choice;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Image;
-import java.awt.TextField;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -22,9 +19,8 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
-import hotelreserv.admin.UserVO;
 import hotelreserv.admin.HotelVO;
-import hotelreserv.admin.ReservVO;
+import hotelreserv.admin.UserVO;
 
 public class DetailHotel extends Page {
 	JPanel p_wrapper;
@@ -151,7 +147,17 @@ public class DetailHotel extends Page {
       la_price.setBorder(new LineBorder(Color.BLACK,1));
 
       bt_reserv.setPreferredSize(new Dimension(200, 30));
+      bt_reserv.setBackground(Color.BLACK);
+      bt_reserv.setForeground(Color.WHITE);
+      bt_reserv.setFocusPainted(false);
+      bt_reserv.setFont(new Font("Verdaba", Font.BOLD, 14));
+      bt_reserv.setCursor(new Cursor(Cursor.HAND_CURSOR));
       bt_prev.setPreferredSize(new Dimension(200, 30));
+      bt_prev.setBackground(Color.BLACK);
+      bt_prev.setForeground(Color.WHITE);
+      bt_prev.setFocusPainted(false);
+      bt_prev.setFont(new Font("Verdaba", Font.BOLD, 14));
+      bt_prev.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
       la_can_title.setFont(new Font("Verdana", Font.BOLD, 20));
       p_option.setBorder(new TitledBorder(new LineBorder(Color.RED,2), "Select Detail Hotel"));
